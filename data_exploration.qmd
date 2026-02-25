@@ -1,0 +1,19 @@
+---
+title: "Data exploration"
+format: html
+editor: visual
+---
+
+```{r}
+#install.packages("haven")
+library(haven)
+```
+
+```{r}
+# Gathering data from .dta file
+data <- read_dta("AJAE MS#19355-Data and Codes-Gatti/data.dta")
+
+# Create CSV from data
+write.csv(data, "irrigation_data.csv", row.names = FALSE)
+```
+
